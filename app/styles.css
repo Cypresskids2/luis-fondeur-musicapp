@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+:root{
+    --dark-cyan: #21897eff;
+    --keppel: #3ba99cff;
+    --tiffany-blue: #69d1c5ff;
+    --maya-blue: #7ebce6ff;
+    --tropical-indigo: #8980f5ff;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.navbar{
+    background-color: #31081F;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.nav-link{
+    padding-right:1vmin;
+    text-decoration: none;
+    color: white;
+    font-size:3vmin;
+    font-family: Inter;
+    scale:1;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 500ms;
+
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    scale: 0.90;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 500ms;
+    font-family: Inter;
+}
+
+.nav-title{
+    font-size: 4vmin;
+    font-family: Tourney;
+}
+
+.body-content{
+    width:100%;
+    height:fit-content;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:10vh;
+    background: linear-gradient(0.25turn, var(--dark-cyan), var( --maya-blue),var(--tropical-indigo));
+}
+
+.footer{
+    background: black;
+    height:fit-content;
+    min-height: 20vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-grid{
+    margin-top:10vh;
+    margin-bottom: 10vh;
+    width:60%;
+    height:60vh;
+    background-color: var(--dark-cyan);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1vmin;
+}
+
+.lyric{
+    font-size:4vmin;
+    text-align: center;
+    color: var(--tropical-indigo);
+    margin-top: 2vmin;
+    font-family: Inter;
+
+}
+
+.image-box{
+    width: 100%;
+    height:100%;
+    max-height: 60vh;
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.music-image{
+    width:45vmin;
+    height:45vmin;
+    transition:.05s ease;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+
+.music-image:hover{
+    filter:brightness(50%);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/*play button*/
+
+.song-name{
+    font-size:8.5vmin;
+    color: var(--keppel);
+    text-align: center;
+    line-height: 80%;
+    margin-bottom: 2vmin;
+    font-family: Kode Mono;
+}
+
+.music-supp-text{
+    font-size:4vmin;
+    text-align: center;
+    font-family: Inter;
+}
+
+.artist-name{
+    font-size:5vmin;
+    color: var(--tiffany-blue);
+    text-align: center;
+    font-family: Kode Mono;
+
+}
+
+.album{
+    color: var(--tropical-indigo);
+    font-size:5vmin;
+    text-align: center;
+    font-family: Kode Mono;
+}
+
+.song-link{
+    font-size:3vmin;
+    color:var(--maya-blue);
+    text-decoration: none;
+    font-family: Kode Mono;
+
+}
+
+.song-link-hover{
+    text-decoration: underline;
+    scale:0.98;
+}
+
+.music-info-box{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.play-button{
+    width: 40vmin;
+    height: 40vmin;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+}
